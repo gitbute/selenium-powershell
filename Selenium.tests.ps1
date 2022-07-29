@@ -54,12 +54,6 @@ Describe "Verify the Binaries SHA256 Hash" {
         $Hash = (Get-FileHash -Algorithm SHA256 -Path $PSScriptRoot\assemblies\IEDriverServer.exe).Hash
         $Hash | Should -Be (Get-Content -Path $PSScriptRoot\assemblies\IEDriverServer.exe.sha256)
     }
-
-    It "Check MicrosoftWebDriver.exe Hash" {
-        # VirusTotal Scan URL = https://www.virustotal.com/gui/file/6e8182697ea5189491b5519d8496a3392e43741b7c0515130f2f8205881d208e/detection
-        $Hash = (Get-FileHash -Algorithm SHA256 -Path $PSScriptRoot\assemblies\MicrosoftWebDriver.exe).Hash
-        $Hash | Should -Be (Get-Content -Path $PSScriptRoot\assemblies\MicrosoftWebDriver.exe.sha256)
-    }
 }
 
 Describe "Start-SeChrome" {

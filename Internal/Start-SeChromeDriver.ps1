@@ -19,6 +19,7 @@ function Start-SeChromeDriver {
         [Double]$CommandTimeout
 
 
+        
 
         #        [System.IO.FileInfo]$ProfilePath,
         #        $BinaryPath,
